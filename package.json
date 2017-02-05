@@ -1,0 +1,11 @@
+{
+  "name": "allofw-prebuilt",
+  "version": "0.0.1",
+  "description": "Prebuilt binaries for Allofw library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donghao Ren <donghao.ren+npm@gmail.com> (https://donghaoren.org/)",
+  "license": "MIT"
+}
