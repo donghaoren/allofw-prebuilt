@@ -1,5 +1,5 @@
 {
-  "name": "allofw-prebuilt",
+  "name": "allofw",
   "version": "0.0.1",
   "description": "Prebuilt binaries for Allofw library",
   "main": "index.js",
