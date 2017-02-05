@@ -1,4 +1,4 @@
-declare module "allofw-prebuilt" {
+declare module "allofw" {
     export module GL3 {
         export class Shader {
             public id(): number;
