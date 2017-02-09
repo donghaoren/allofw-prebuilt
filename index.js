@@ -7,4 +7,5 @@ if(platform == "darwin") {
 }
 if(platform == "win32") {
     exports = require("./win32_x64/allofw.node");
+    exports.OpenVROmniStereo = require("./win32_x64/allofw_openvr.node");
 }
