@@ -69,7 +69,7 @@ export module graphics {
 
         public measureText(text: string): number;
 
-        public setColorMatrix(...args: number[20]): Paint2D;
+        public setColorMatrix(...args: number[]): Paint2D;
         public setColorMatrixScale(r: number, g: number, b: number, a: number): Paint2D;
         public setColorMatrixScaleAlpha(alpha: number): Paint2D;
         public setTransferMode(mode: number): Paint2D;
