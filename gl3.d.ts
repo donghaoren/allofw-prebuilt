@@ -1,7 +1,7 @@
 // Javascript binding to OpenGL 3.3 API
 
 export module GL3 {
-    export type GLPointerType = number | number[] | string | ArrayBuffer;
+    export type GLPointerType = number | number[] | string | ArrayBufferView;
     export class Shader {
         public id(): number;
     }
