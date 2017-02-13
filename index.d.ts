@@ -34,8 +34,24 @@ export class OpenGLWindow {
     public close(): void;
 }
 
-export interface CompositeInfo {
+export interface ICompositeInfo {
     panorama?: [ number, number, "cubemap" | "cubemap-yuv420p" | "equirectangular" ];
+}
+
+export interface IOmniStereo {
+    setPose: (x: number, y: number, z: number, qx: number, qy: number, qz: number, qw: number) => void;
+    setLens: (eyeSeparation: number, sphereRadius: number) => void;
+    setClipRange: (near: number, far: number) => void;
+    getCubemapTexture: () => [ number, number ];
+    getDepthCubemapTexture: () => [ number, number ];
+    capture: () => void;
+    composite: (viewportX: number, viewportY: number, viewportWidth: number, viewportHeight: number, compositeInfo: ICompositeInfo) => void;
+    setUniforms: (shaderID: number) => void;
+    getShaderCode: () => string;
+    compositeCustomizeShader: (code: string) => void;
+    compositeRestoreShader: () => void;
+    onCaptureViewport: (callback: () => void) => void;
+    getHeadPose?: () => number[];
 }
 
 export class OmniStereo {
@@ -46,7 +62,7 @@ export class OmniStereo {
     public getCubemapTexture(): [ number, number ];
     public getDepthCubemapTexture(): [ number, number ];
     public capture(): void;
-    public composite(viewportX: number, viewportY: number, viewportWidth: number, viewportHeight: number, compositeInfo: CompositeInfo): void;
+    public composite(viewportX: number, viewportY: number, viewportWidth: number, viewportHeight: number, compositeInfo: ICompositeInfo): void;
     public setUniforms(shaderID: number): void;
     public getShaderCode(): string;
     public compositeCustomizeShader(code: string): void;
@@ -63,11 +79,12 @@ export module OpenVR {
         public getCubemapTexture(): [ number, number ];
         public getDepthCubemapTexture(): [ number, number ];
         public capture(): void;
-        public composite(viewportX: number, viewportY: number, viewportWidth: number, viewportHeight: number, compositeInfo: CompositeInfo): void;
+        public composite(viewportX: number, viewportY: number, viewportWidth: number, viewportHeight: number, compositeInfo: ICompositeInfo): void;
         public setUniforms(shaderID: number): void;
         public getShaderCode(): string;
         public compositeCustomizeShader(code: string): void;
         public compositeRestoreShader(): void;
         public onCaptureViewport(callback: () => void): void;
+        public getHeadPose(): number[];
     }
 }

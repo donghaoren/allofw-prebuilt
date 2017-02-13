@@ -21,13 +21,13 @@ export module graphics {
     export let TRANSFERMODE_SRC_OVER: number;
 
     export class Surface2D {
-        constructor(data: Buffer);
-        constructor(width: number, height: number, data: Buffer);
+        constructor(data: ArrayBufferView);
+        constructor(width: number, height: number, data: ArrayBufferView);
         constructor(width: number, height: number, type: number);
 
         public width(): number;
         public height(): number;
-        public pixels(): Buffer;
+        public pixels(): ArrayBufferView;
         public bindTexture(textureUnit: number): void;
         public uploadTexture(): void;
         public unbindTexture(textureUnit: number): void;
@@ -43,8 +43,8 @@ export module graphics {
         public duration(): number;
         public nextFrame(): void;
         public seek(timestamp: number): void;
-        public pixels(): Buffer;
-        public setPixelBuffer(buffer: ArrayBufferView | Buffer): void;
+        public pixels(): ArrayBufferView;
+        public setPixelBuffer(buffer: ArrayBufferView): void;
     }
 
     export class Path2D {
@@ -103,5 +103,5 @@ export module graphics {
         public flush(): void;
     }
 
-    export function loadImageData(data: Buffer): Surface2D;
+    export function loadImageData(data: ArrayBufferView): Surface2D;
 }
