@@ -1,6 +1,6 @@
 {
   "name": "allofw",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Prebuilt binaries for Allofw library",
   "main": "index.js",
   "types": "index.d.ts",
