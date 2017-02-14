@@ -1072,8 +1072,8 @@ export module GL3 {
     function attachShader(program: Program | number, shader: Shader | number): void;
     function bindAttribLocation(program: Program | number, index: number, name: string): void;
     function compileShader(shader: Shader | number): void;
-    function createProgram(): Program | number;
-    function createShader(type: number): Shader | number;
+    function createProgram(): Program;
+    function createShader(type: number): Shader;
     function detachShader(program: Program | number, shader: Shader | number): void;
     function disableVertexAttribArray(index: number): void;
     function enableVertexAttribArray(index: number): void;

@@ -27,6 +27,7 @@ export class OpenGLWindow {
     public onKeyboard(callback: (key: string, action: string, modifiers: string, scancode: number) => void): void;
     public makeContextCurrent(): void;
     public swapBuffers(): void;
+    public setSwapInterval(interval: number): void;
     public pollEvents(): void;
     public waitEvents(): void;
     public getFramebufferSize(): [ number, number ];
