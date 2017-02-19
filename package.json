@@ -8,7 +8,8 @@
     "node": "^6.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "node utils/unarchive.js",
+    "archive": "node utils/archive.js"
   },
   "author": "Donghao Ren <donghao.ren+npm@gmail.com> (https://donghaoren.org/)",
   "license": "MIT"
