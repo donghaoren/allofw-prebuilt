@@ -5,6 +5,7 @@ let zlib = require("zlib");
 
 function walkDirectory(directory, callback) {
     let list = fs.readdirSync(directory);
+    list.sort((a, b) => a < b ? -1 : 1);
     list.forEach((file) => {
         filepath = path.join(directory, file);
         // Get the file's stats

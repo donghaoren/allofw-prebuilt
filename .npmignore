@@ -1,0 +1,5 @@
+bin/
+
+darwin_x64/
+win32_x64/
+linux_x64/
