@@ -9,3 +9,6 @@ if(platform == "win32") {
     module.exports = require("./win32_x64/allofw.node");
     module.exports.OpenVR = require("./win32_x64/allofw_openvr.node");
 }
+if(platform == "linux") {
+    module.exports = require("./linux_x64/allofw.node");
+}
