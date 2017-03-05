@@ -78,10 +78,12 @@ export module graphics {
     }
 
     export class GraphicalContext2D {
+        constructor(surface: Surface2D);
+
         public path(): Path2D;
         public paint(): Paint2D;
         public drawPath(path: Path2D, paint: Paint2D): void;
-        public drawText(x: number, y: number, text: string, paint: Paint2D): void;
+        public drawText(text: string, x: number, y: number, paint: Paint2D): void;
         public drawLine(x1: number, y1: number, x2: number, y2: number, paint: Paint2D): void;
         public drawCircle(cx: number, cy: number, radius: number, paint: Paint2D): void;
         public drawRectangle(x: number, y: number, width: number, height: number, paint: Paint2D): void;
