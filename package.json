@@ -1,12 +1,9 @@
 {
   "name": "allofw",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Prebuilt binaries for Allofw library",
   "main": "index.js",
   "types": "index.d.ts",
-  "engines": {
-    "node": "^6.0.0"
-  },
   "scripts": {
   },
   "author": "Donghao Ren <donghao.ren+npm@gmail.com> (https://donghaoren.org/)",
