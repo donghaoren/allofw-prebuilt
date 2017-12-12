@@ -1,11 +1,15 @@
 {
   "name": "allofw",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Prebuilt binaries for Allofw library",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
+    "postinstall": "node postinstall.js"
   },
   "author": "Donghao Ren <donghao.ren+npm@gmail.com> (https://donghaoren.org/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "tar": "^4.1.1"
+  }
 }
